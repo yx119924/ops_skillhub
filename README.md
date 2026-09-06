@@ -30,22 +30,56 @@
 
 ## 快速开始
 
+### 一键安装（推荐）
+
+```bash
+# 1. 克隆仓库
+git clone https://github.com/yx119924/ops_skillhub.git
+cd ops_skillhub
+
+# 2. 一键安装所有 skill
+./install.sh
+
+# 或 Windows PowerShell
+.\install.ps1
+```
+
 ### 安装单个 Skill
 
 ```bash
-# 把整个 skill 文件夹复制到 WorkBuddy 的 skills 目录
-cp -r 01-ssh-network/ops-ssh-troubleshoot ~/.workbuddy/skills/
-
-# 下次 AI 收到"SSH 连不上"类问题会自动加载此 skill
+./install.sh ops-ssh-troubleshoot
 ```
 
-### 在 GitHub 上浏览
+### 按分类安装
 
-直接访问 https://github.com/<your-username>/ops_skillhub 浏览所有 skill，挑选需要的复制。
+```bash
+./install.sh --category 02-disk-storage
+```
 
-### 编写新 Skill
+### 查看所有可用 skill
 
-查看 [CONTRIBUTING.md](./CONTRIBUTING.md) 了解命名规范、YAML frontmatter 要求、提交流程。
+```bash
+./install.sh --list
+```
+
+### 卸载/更新
+
+```bash
+./install.sh --uninstall ops-ssh-troubleshoot
+./install.sh --update
+```
+
+### 高级用法
+
+```bash
+# 直接通过 curl/wget 执行（不克隆仓库）
+curl -fsSL https://raw.githubusercontent.com/yx119924/ops_skillhub/main/install.sh | bash -s -- all
+
+# 让 AI 帮你安装（在对话中说即可）：
+# "帮我从 ops_skillhub 仓库安装 SSH 故障排查 skill"
+```
+
+> 完整文档见 [INSTALL.md](./INSTALL.md)
 
 ## 设计原则
 
