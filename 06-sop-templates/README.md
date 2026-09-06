@@ -4,12 +4,19 @@
 
 ---
 
+## ✅ 已收录
+
+| Skill | 说明 | 版本 |
+|---|---|---|
+| [sop-change-management](./sop-change-management/) | 变更管理 SOP（申请→评估→审批→灰度→验证→归档） | v1.0 |
+
+---
+
 ## 🚧 规划中
 
 | Skill | 解决场景 | 优先级 |
 |---|---|---|
 | `sop-server-provision` | 新服务器交付 SOP | ⭐⭐⭐⭐⭐ |
-| `sop-change-management` | 变更管理 SOP（含审批、灰度、回滚） | ⭐⭐⭐⭐⭐ |
 | `sop-incident-response` | 应急响应 SOP | ⭐⭐⭐⭐⭐ |
 | `sop-security-incident` | 安全事件 SOP | ⭐⭐⭐⭐ |
 | `sop-data-recovery` | 数据恢复 SOP（误删、损坏） | ⭐⭐⭐⭐ |
@@ -29,8 +36,6 @@
 7. 记录与归档
 ```
 
----
-
 ## 与普通 Skill 的区别
 
 | Skill（操作类） | SOP（流程类） |
@@ -39,3 +44,11 @@
 | 命令步骤为主 | 角色 + 时间节点为主 |
 | 偏技术 | 偏管理 + 技术 |
 | 单人可执行 | 多人协作 |
+
+---
+
+## 安装
+
+```bash
+./install.sh --category 06-sop-templates
+```

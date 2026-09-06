@@ -3,7 +3,8 @@
 > 运维工程师的 AI Skill 仓库 —— 沉淀多年实战经验，让任何 AI 都能按你的 SOP 干活
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Skill Count](https://img.shields.io/badge/skills-1-blue)](categories.md)
+[![Skill Count](https://img.shields.io/badge/skills-7-blue)](categories.md)
+[![Version](https://img.shields.io/badge/version-v0.2.0-success)]()
 [![Status](https://img.shields.io/badge/status-active-success)]()
 
 ## 这是什么
@@ -17,16 +18,16 @@
 
 ## 包含什么
 
-| 分类 | Skill | 状态 |
+| 分类 | 已有 Skill | 状态 |
 |---|---|---|
-| [01-ssh-network](./01-ssh-network/) | [ops-ssh-troubleshoot](./01-ssh-network/ops-ssh-troubleshoot/) | ✅ 已完成 |
-| [02-disk-storage](./02-disk-storage/) | 磁盘清理、空间排查、日志轮转 | 🚧 规划中 |
-| [03-incident-response](./03-incident-response/) | 通用故障排查框架 | 🚧 规划中 |
-| [04-deploy-docs](./04-deploy-docs/) | 部署文档模板与编写规范 | 🚧 规划中 |
-| [05-ops-experience](./05-ops-experience/) | 运维经验沉淀（架构、容量、稳定性） | 🚧 规划中 |
-| [06-sop-templates](./06-sop-templates/) | 标准 SOP 模板（变更、应急、上线） | 🚧 规划中 |
+| [01-ssh-network](./01-ssh-network/) | ops-ssh-troubleshoot / ops-network-diagnose | ✅ 2 个 |
+| [02-disk-storage](./02-disk-storage/) | ops-disk-cleanup | ✅ 1 个 |
+| [03-incident-response](./03-incident-response/) | ops-incident-triage / ops-high-cpu-load | ✅ 2 个 |
+| [04-deploy-docs](./04-deploy-docs/) | ops-docker-compose-template | ✅ 1 个 |
+| [05-ops-experience](./05-ops-experience/) | 容量规划、架构设计 | 🚧 规划中 |
+| [06-sop-templates](./06-sop-templates/) | sop-change-management | ✅ 1 个 |
 
-完整索引见 [categories.md](./categories.md)。
+**当前共 7 个 Skill**，完整索引见 [categories.md](./categories.md)。
 
 ## 快速开始
 

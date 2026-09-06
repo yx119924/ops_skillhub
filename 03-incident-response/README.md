@@ -4,28 +4,44 @@
 
 ---
 
+## ✅ 已收录
+
+| Skill | 说明 | 版本 |
+|---|---|---|
+| [ops-incident-triage](./ops-incident-triage/) | 通用故障排查框架（任何告警先走这个：确认→止血→定位→修复→复盘） | v1.0 |
+| [ops-high-cpu-load](./ops-high-cpu-load/) | CPU/load 高排查（系统→进程→线程→抓栈） | v1.0 |
+
+---
+
 ## 🚧 规划中
 
 | Skill | 解决场景 | 优先级 |
 |---|---|---|
-| `ops-incident-triage` | 通用故障排查框架（任何告警先走这个） | ⭐⭐⭐⭐⭐ |
-| `ops-postmortem-template` | 故障复盘模板（Postmortem） | ⭐⭐⭐⭐ |
 | `ops-oncall-handover` | 值班交接清单 | ⭐⭐⭐ |
 | `ops-502-diagnose` | Web 服务 502 排查 | ⭐⭐⭐⭐ |
 | `ops-mysql-replication-break` | MySQL 主从复制中断 | ⭐⭐⭐ |
+| `ops-memory-leak` | 内存泄漏排查 | ⭐⭐⭐⭐ |
+| `ops-disk-io-bottleneck` | 磁盘 IO 瓶颈 | ⭐⭐⭐ |
+
+> 💡 `ops-postmortem-template` 已包含在 `ops-incident-triage` 的 references/ 中，无需独立 skill。
 
 ---
 
-## 待补充 Skill
+## 使用建议
 
-`ops-incident-triage` 是最高优先级，建议优先编写。
+**故障发生时的优先级**：
 
-### 编写提示
+1. **先用 `ops-incident-triage`**（总框架）—— 五步流程
+2. **按现象叠加专项 skill**：
+   - CPU 高 → `ops-high-cpu-load`
+   - 磁盘满 → `ops-disk-cleanup`
+   - 网络不通 → `ops-network-diagnose`
+   - SSH 连不上 → `ops-ssh-troubleshoot`
 
-故障排查通用框架应该：
+---
 
-1. **先确认范围**：影响哪些业务、哪些用户
-2. **快速止血**：能不能先临时恢复（重启 / 切流量 / 回滚）
-3. **深入定位**：从外到内、从现象到根因
-4. **验证修复**：是否真的解决了
-5. **事后复盘**：写 Postmortem、改进措施
+## 安装
+
+```bash
+./install.sh --category 03-incident-response
+```
