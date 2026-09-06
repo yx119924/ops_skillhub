@@ -1,14 +1,14 @@
-# 04-deploy-docs ｜ 部署文档编写
+# 02-deployment ｜ 部署方案
 
-部署文档模板、部署脚本规范、回滚方案等相关 Skill。
+应用/服务的部署、变更、回滚方案。覆盖容器化、配置管理、脚本规范等。
 
 ---
 
 ## ✅ 已收录
 
-| Skill | 说明 | 版本 |
+| Skill | 说明 | 适用场景 |
 |---|---|---|
-| [ops-docker-compose-template](./ops-docker-compose-template/) | docker-compose 部署模板库（Web/DB/Cache/中间件 5+ 场景） | v1.0 |
+| [ops-docker-compose-template](./ops-docker-compose-template/) | docker-compose 部署模板库（Web/DB/Cache/中间件 5+ 场景） | 新服务容器化部署、现有 compose 改造 |
 
 ---
 
@@ -21,6 +21,8 @@
 | `rollback-plan-template` | 回滚方案模板 | ⭐⭐⭐⭐⭐ |
 | `env-diff-checklist` | 环境差异检查清单（dev/test/prod） | ⭐⭐⭐ |
 | `deploy-readiness-review` | 上线前 Readiness 检查清单 | ⭐⭐⭐⭐ |
+| `k8s-deploy-template` | Kubernetes 部署模板 | ⭐⭐⭐ |
+| `helm-chart-template` | Helm Chart 模板 | ⭐⭐ |
 
 ---
 
@@ -34,16 +36,10 @@
 - 常用命令速查
 - 安全红线清单
 
-适用：
-
-- ✅ 新服务容器化部署
-- ✅ 现有 compose 文件改造
-- ✅ 跨服务栈标准化（团队规范）
-
 ---
 
 ## 安装
 
 ```bash
-./install.sh --category 04-deploy-docs
+./install.sh --category 02-deployment
 ```

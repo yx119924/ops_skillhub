@@ -4,7 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Skill Count](https://img.shields.io/badge/skills-7-blue)](categories.md)
-[![Version](https://img.shields.io/badge/version-v0.2.0-success)]()
+[![Version](https://img.shields.io/badge/version-v0.3.0-success)]()
 [![Status](https://img.shields.io/badge/status-active-success)]()
 
 ## 这是什么
@@ -16,18 +16,20 @@
 - ✅ 引用你的内部规范，而不是百科式回答
 - ✅ 跨公司、跨工具复用，一次编写到处可用
 
-## 包含什么
+## 分类体系（按运维职能划分）
 
-| 分类 | 已有 Skill | 状态 |
+按行业标准视角组织，**4 大类**覆盖绝大部分运维场景：
+
+| 分类 | 定位 | Skill 数 |
 |---|---|---|
-| [01-ssh-network](./01-ssh-network/) | ops-ssh-troubleshoot / ops-network-diagnose | ✅ 2 个 |
-| [02-disk-storage](./02-disk-storage/) | ops-disk-cleanup | ✅ 1 个 |
-| [03-incident-response](./03-incident-response/) | ops-incident-triage / ops-high-cpu-load | ✅ 2 个 |
-| [04-deploy-docs](./04-deploy-docs/) | ops-docker-compose-template | ✅ 1 个 |
-| [05-ops-experience](./05-ops-experience/) | 容量规划、架构设计 | 🚧 规划中 |
-| [06-sop-templates](./06-sop-templates/) | sop-change-management | ✅ 1 个 |
+| [01-troubleshooting](./01-troubleshooting/) ｜ 故障排查 | 主动/被动触发的故障诊断 SOP | 4 |
+| [02-deployment](./02-deployment/) ｜ 部署方案 | 应用/服务的部署、变更、回滚 | 1 |
+| [03-sre](./03-sre/) ｜ SRE 建设 | SOP、稳定性、容量、架构 | 1 |
+| [04-basics](./04-basics/) ｜ 基础运维 | 日常运维基础操作 | 1 |
 
 **当前共 7 个 Skill**，完整索引见 [categories.md](./categories.md)。
+
+---
 
 ## 快速开始
 
@@ -45,16 +47,19 @@ cd ops_skillhub
 .\install.ps1
 ```
 
+### 按分类安装（推荐用法）
+
+```bash
+./install.sh --category 01-troubleshooting    # 故障排查全套
+./install.sh --category 02-deployment         # 部署方案
+./install.sh --category 03-sre                # SRE 建设
+./install.sh --category 04-basics             # 基础运维
+```
+
 ### 安装单个 Skill
 
 ```bash
 ./install.sh ops-ssh-troubleshoot
-```
-
-### 按分类安装
-
-```bash
-./install.sh --category 02-disk-storage
 ```
 
 ### 查看所有可用 skill
@@ -73,7 +78,7 @@ cd ops_skillhub
 ### 高级用法
 
 ```bash
-# 直接通过 curl/wget 执行（不克隆仓库）
+# 直接通过 curl 执行（不克隆仓库）
 curl -fsSL https://raw.githubusercontent.com/yx119924/ops_skillhub/main/install.sh | bash -s -- all
 
 # 让 AI 帮你安装（在对话中说即可）：
@@ -81,6 +86,8 @@ curl -fsSL https://raw.githubusercontent.com/yx119924/ops_skillhub/main/install.
 ```
 
 > 完整文档见 [INSTALL.md](./INSTALL.md)
+
+---
 
 ## 设计原则
 
